@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ-панель - FishLog</title>
+</head>
+<body>
+    <header>
+        <a href="admin.html">FishLog-Админ</a>
+        <nav aria-label="Аккаунт">
+            <ul>
+                <li><a href="index.html">Выйти</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Админ-панель</h1>
+
+        <nav aria-label="Разделы админ-панели">
+            <ul>
+                <li><a href="#users">Пользователи</a></li>
+                <li><a href="#records">Записи</a></li>
+            </ul>
+        </nav>
+
+        <section id="users">
+            <h2>Пользователи</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Пользователь</th>
+                        <th scope="col">Статус</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Иванов</td>
+                        <td>Активен</td>
+                        <td>
+                            <form action="#" method="post">
+                                <button type="submit">Заблокировать</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="records">
+            <h2>Записи</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Место</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><time datetime="2025-09-01">01.09.2025</time></td>
+                        <td>Исеть</td>
+                        <td>
+                            <form action="#" method="post">
+                                <button type="submit">Удалить</button>
+                            </form>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 FishLog</p>
+        <ul>
+            <li><a href="#">Telegram</a></li>
+            <li><a href="#">VK</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
