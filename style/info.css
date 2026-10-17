@@ -1,0 +1,508 @@
+.fishing-page {
+    max-width: 1120px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+    color: var(--muted);
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent-hover);
+}
+
+.back-link span {
+    font-size: 22px;
+}
+
+.fishing-hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    padding: 40px;
+    margin-bottom: 48px;
+    border-radius: 28px;
+    background: var(--teal);
+    color: white;
+    overflow: hidden;
+    position: relative;
+}
+
+.fishing-hero::after {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    right: 100px;
+    bottom: -210px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 50%;
+    box-shadow:
+        0 0 0 30px rgba(255, 255, 255, 0.035),
+        0 0 0 60px rgba(255, 255, 255, 0.025);
+    pointer-events: none;
+}
+
+.fishing-hero__content {
+    max-width: 700px;
+    position: relative;
+    z-index: 1;
+}
+
+.fishing-hero .page__eyebrow {
+    display: block;
+    margin-bottom: 16px;
+    color: var(--on-teal);
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.fishing-hero h1 {
+    max-width: 650px;
+    margin-bottom: 16px;
+    color: white;
+    font-size: clamp(28px, 4vw, 42px);
+    line-height: 1.2;
+    overflow-wrap: anywhere;
+}
+
+.fishing-hero__description {
+    max-width: 580px;
+    color: var(--on-teal);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.fishing-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.fishing-tag {
+    padding: 8px 14px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.fishing-hero__date {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 138px;
+    height: 158px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.07);
+    position: relative;
+    z-index: 1;
+}
+
+.fishing-hero__day {
+    color: white;
+    font-size: 58px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.fishing-hero__month {
+    margin-top: 8px;
+    color: var(--on-teal);
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.fishing-hero__year {
+    margin-top: 5px;
+    color: var(--on-teal);
+    font-size: 12px;
+}
+
+.fishing-section {
+    margin-bottom: 44px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.section-eyebrow {
+    display: block;
+    margin-bottom: 8px;
+    color: var(--muted);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.section-heading h2 {
+    color: var(--ink);
+    font-size: 26px;
+    font-weight: 800;
+}
+
+/* Карточки условий */
+
+.conditions {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.condition {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 9px;
+    min-width: 0;
+    padding: 22px;
+    border: 1px solid #E2EAE8;
+    border-radius: 20px;
+    background: white;
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.condition:hover {
+    transform: translateY(-3px);
+    border-color: var(--line);
+    box-shadow: 0 10px 25px rgba(15, 42, 46, 0.05);
+}
+
+.condition__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin-bottom: 5px;
+    border-radius: 14px;
+    background: var(--bg);
+    font-size: 21px;
+}
+
+.condition__label {
+    color: var(--muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.condition__value {
+    max-width: 100%;
+    color: var(--ink);
+    font-size: 21px;
+    font-weight: 800;
+    overflow-wrap: anywhere;
+}
+
+.condition__hint {
+    color: var(--muted);
+    font-size: 12px;
+}
+
+/* Карточка улова */
+
+.catch-card {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 26px;
+    border: 1px solid #E2EAE8;
+    border-radius: 22px;
+    background: white;
+}
+
+.catch-card__icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    background: #E7F0ED;
+    font-size: 36px;
+}
+
+.catch-card__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.catch-card__label {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.catch-card__info h3 {
+    margin: 5px 0;
+    color: var(--ink);
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.catch-card__info p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.catch-card__weight {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding-left: 24px;
+    border-left: 1px solid #E2EAE8;
+}
+
+.catch-card__weight span {
+    color: var(--muted);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.catch-card__weight strong {
+    color: var(--teal);
+    font-size: 30px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.catch-card__weight small {
+    font-size: 15px;
+}
+
+/* Заметки */
+
+.notes-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    padding: 28px;
+    border: 1px solid #E2EAE8;
+    border-radius: 22px;
+    background: white;
+}
+
+.notes-card__mark {
+    flex-shrink: 0;
+    color: var(--accent);
+    font-size: 54px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+.notes-card p {
+    padding-top: 6px;
+    color: var(--muted);
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+/* Кнопки действий */
+
+.fishing-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding-top: 28px;
+    border-top: 1px solid #DCE6E3;
+}
+
+.fishing-actions .btn {
+    min-height: 48px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 22px;
+    border-radius: 14px;
+    font-size: 14px;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.fishing-actions form {
+    margin-left: auto;
+}
+
+.fishing-actions .btn--danger {
+    min-height: 48px;
+    border: 1px solid #F0D3D0;
+    border-radius: 14px;
+    background: #FBECEB;
+    color: var(--danger);
+    font: inherit;
+    font-size: 14px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+.fishing-actions .btn--danger:hover {
+    background: #F5DAD7;
+}
+
+/* Адаптация */
+
+@media (max-width: 860px) {
+    .fishing-page {
+        padding: 28px;
+    }
+
+    .fishing-hero {
+        padding: 30px;
+        gap: 20px;
+    }
+
+    .fishing-hero__date {
+        width: 110px;
+        height: 130px;
+    }
+
+    .fishing-hero__day {
+        font-size: 46px;
+    }
+
+    .conditions {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .fishing-page {
+        padding: 22px 18px;
+    }
+
+    .back-link {
+        margin-bottom: 20px;
+    }
+
+    .fishing-hero {
+        flex-direction: column-reverse;
+        align-items: flex-start;
+        padding: 24px;
+        margin-bottom: 36px;
+        border-radius: 22px;
+    }
+
+    .fishing-hero__date {
+        width: auto;
+        height: auto;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 8px;
+        padding: 10px 14px;
+        border-radius: 12px;
+    }
+
+    .fishing-hero__day {
+        font-size: 24px;
+    }
+
+    .fishing-hero__month,
+    .fishing-hero__year {
+        margin-top: 0;
+    }
+
+    .fishing-hero h1 {
+        font-size: 29px;
+    }
+
+    .fishing-hero__description {
+        font-size: 14px;
+    }
+
+    .section-heading h2 {
+        font-size: 23px;
+    }
+
+    .conditions {
+        gap: 10px;
+    }
+
+    .condition {
+        padding: 16px;
+        border-radius: 16px;
+    }
+
+    .condition__icon {
+        width: 38px;
+        height: 38px;
+        font-size: 18px;
+    }
+
+    .condition__value {
+        font-size: 17px;
+    }
+
+    .catch-card {
+        flex-wrap: wrap;
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .catch-card__icon {
+        width: 56px;
+        height: 56px;
+        font-size: 28px;
+    }
+
+    .catch-card__info h3 {
+        font-size: 20px;
+    }
+
+    .catch-card__weight {
+        width: 100%;
+        margin-top: 8px;
+        padding: 14px 0 0;
+        border-top: 1px solid #E2EAE8;
+        border-left: 0;
+    }
+
+    .notes-card {
+        gap: 10px;
+        padding: 20px;
+    }
+
+    .notes-card p {
+        font-size: 14px;
+    }
+
+    .fishing-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .fishing-actions .btn,
+    .fishing-actions form,
+    .fishing-actions .btn--danger {
+        width: 100%;
+        margin-left: 0;
+    }
+}

@@ -1,0 +1,265 @@
+.auth {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 100vh;
+}
+
+.auth-aside a {
+    text-decoration: none;
+}
+
+.auth-content h1 {
+    font-size: 36px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 14px;
+}
+
+.field-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field-row a {
+    font-weight: 500;
+}
+
+.remember {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.remember label {
+    margin-bottom: 0;
+}
+
+.remember input { 
+    accent-color: var(--teal);
+    width: 20px;
+    height: 20px; 
+}
+
+button[type="submit"] {
+    width: 100%;
+    margin-top: 24px;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: var(--muted);
+    margin-bottom: 18px;
+}
+
+.auth-aside {
+    background: var(--teal);
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 56px;
+}
+
+.auth-aside .logo,
+.auth-text {
+    position: relative;
+}
+
+.auth-aside .logo {
+    color: white;   
+}
+
+.logo-mobile { display: none; }
+
+.auth-text {
+    max-width: 440px;
+}
+
+.auth-text h2 { 
+    font-size: 44px; 
+    line-height: 1.1; 
+    font-weight: 800; 
+    margin-bottom: 16px; 
+}
+
+.auth-text p { 
+    font-size: 18px; 
+    line-height: 1.5; 
+    color: var(--on-teal); 
+}
+
+.tab {
+    padding: 8px 18px;
+    border-radius: 18px;
+    background-color: var(--chip);
+    color: var(--ink);
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tab:hover {
+    background: var(--teal);
+    opacity: 0.8;
+    color: var(--bg);
+}
+
+.tab-active {
+    background-color: var(--teal);
+    color: white;
+}
+
+.auth-lines {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    fill: none;
+    stroke: var(--teal-soft);
+    stroke-width: 1.5;
+}
+
+.auth-lines g {
+    transform: rotate(-18deg);
+    transform-origin: 300px 420px;
+}
+
+.auth-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 24px;
+}
+
+.auth-content {
+    width: 100%;
+    max-width: 400px;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.tabs a {
+    text-decoration: none;
+}
+
+.switch {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--muted);
+}
+
+.switch a {
+    font-weight: 800;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 40px;
+    font-size: 14px;
+    color: var(--muted);
+}
+
+footer ul {
+    display: flex;
+    gap: 16px;
+    list-style: none;
+}
+
+@media (max-width: 860px) {
+    .auth {
+        grid-template-columns: 1fr;
+    }
+
+    .auth-aside {
+        display: none;
+    }
+
+    .logo-mobile {
+        display: inline-flex;
+        margin-bottom: 32px;
+        color: var(--bg);
+    }
+
+    .auth-content h1 {
+        font-size: 30px;
+    }
+
+    .auth-main { 
+        position: relative;
+        isolation: isolate;
+        overflow: hidden;
+        background: var(--teal);
+        color: var(--bg);
+    }
+
+    .auth-main::before {
+        content: "";
+        position: absolute;
+        inset: -50%;
+        z-index: -1;
+        background: repeating-radial-gradient(
+            ellipse 48px 38px at 50% 50%,
+            transparent 0 46px,
+            var(--teal-soft) 46px 48px
+        );
+        transform: rotate(-18deg);
+        pointer-events: none;
+    }
+
+    .remember input {
+        accent-color: var(--accent);
+    }
+
+    .subtitle,
+    .switch,
+    footer {
+        color: var(--on-teal);
+    }
+
+    .field-row a {
+        color: var(--bg);
+    }
+
+    .switch a {
+        color: var(--bg);
+    }
+
+    .tab {
+        background-color: rgba(255, 255, 255, 0.12);
+        color: white;
+    }
+
+    .tab-active {
+        background-color: white;
+        color: var(--teal);
+    }
+
+    .tab:hover {
+        background-color: rgba(255, 255, 255, 0.25);
+        color: white;
+    }
+
+    .tab-active:hover {
+        background-color: white;
+        color: var(--teal);
+    }
+
+    footer a { color: var(--on-teal); }
+}

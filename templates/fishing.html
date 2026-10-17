@@ -3,71 +3,183 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Информация о рыбалке - FishLog</title>
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/app.css">
+    <link rel="stylesheet" href="/style/info.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Рыбалка — FishLog</title>
 </head>
+
 <body>
-    <header>
-        <a href="fishings.html">FishLog</a>
-        <nav>
+    <header class="topbar">
+        <a href="fishings.html" class="logo">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12c4-6 11-6 15 0-4 6-11 6-15 0zM18 12l4-4v8z" />
+                <circle cx="8" cy="11" r="1" />
+            </svg>
+            FishLog
+        </a>
+
+        <nav class="topnav">
             <ul>
-                <li>
-                    <a href="index.html">Выйти</a>
-                </li>
+                <li><a href="journal.html" class="active">Журнал</a></li>
+                <li><a href="calendar.html">Календарь</a></li>
+                <li><a href="catches.html">Уловы</a></li>
             </ul>
         </nav>
+
+        <div class="topbar__side">
+            <a href="add-fishing.html" class="btn">Новая рыбалка</a>
+            <a class="avatar" href="profile.html" class="avatar">АК</a>
+        </div>
     </header>
 
-    <main>
-        <h1>Рыбалка от 01.09.2025</h1>
+    <main class="page fishing-page">
 
-        <section>
-            <h2>Условия рыбалки</h2>
-        <dl>
-            <dt>Дата</dt>
-            <dd><time datetime="2025-09-01">01.09.2025</time></dd>
+        <a href="fishings.html" class="back-link">
+            <span aria-hidden="true">←</span> Назад в журнал
+        </a>
 
-            <dt>Место</dt>
-            <dd>Исеть</dd>
+        <section class="fishing-hero">
+            <div class="fishing-hero__content">
+                <span class="page__eyebrow">Мой дневник · 3 октября 2026</span>
 
-            <dt>Температура</dt>
-            <dd>20 °C</dd>
+                <h1>Озеро Вуокса, северный берег</h1>
 
-            <dt>Давление</dt>
-            <dd>762 мм рт. ст.</dd>
+                <p class="fishing-hero__description">
+                    Утренняя рыбалка со спиннингом. Воблер сработал
+                    лучше всего на рассвете.
+                </p>
 
-            <dt>Направление ветра</dt>
-            <dd>Юго-Запад</dd>
+                <div class="fishing-tags">
+                    <span class="fishing-tag">Спиннинг</span>
+                    <span class="fishing-tag">Воблер</span>
+                    <span class="fishing-tag">С берега</span>
+                </div>
+            </div>
 
-            <dt>Скорость ветра</dt>
-            <dd>2 м/с</dd>
-
-            <dt>Погода</dt>
-            <dd>Солнечно</dd>
-        </dl>
+            <div class="fishing-hero__date">
+                <span class="fishing-hero__day">3</span>
+                <span class="fishing-hero__month">ОКТ</span>
+                <span class="fishing-hero__year">2026</span>
+            </div>
         </section>
 
-        <a href="edit-fishing.html">Редактировать</a>
+        <section class="fishing-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-eyebrow">Окружающая среда</span>
+                    <h2>Условия рыбалки</h2>
+                </div>
+            </div>
 
-        <form action="#" method="post">
-            <button type="submit">Удалить</button>
-        </form>
+            <div class="conditions">
+                <article class="condition">
+                    <span class="condition__icon" aria-hidden="true">🌡️</span>
+                    <span class="condition__label">Температура</span>
+                    <span class="condition__value">+9 °C</span>
+                </article>
 
-        <a href="fishings.html">Назад</a>
+                <article class="condition">
+                    <span class="condition__icon" aria-hidden="true">🧭</span>
+                    <span class="condition__label">Давление</span>
+                    <span class="condition__value">762 мм</span>
+                </article>
+
+                <article class="condition">
+                    <span class="condition__icon" aria-hidden="true">💨</span>
+                    <span class="condition__label">Ветер</span>
+                    <span class="condition__value">3 м/с</span>
+                    <span class="condition__hint">Северо-западный</span>
+                </article>
+
+                <article class="condition">
+                    <span class="condition__icon" aria-hidden="true">☁️</span>
+                    <span class="condition__label">Погода</span>
+                    <span class="condition__value">Облачно</span>
+                </article>
+
+                <article class="condition">
+                    <span class="condition__icon" aria-hidden="true">📍</span>
+                    <span class="condition__label">Место</span>
+                    <span class="condition__value">Вуокса</span>
+                    <span class="condition__hint">Северный берег</span>
+                </article>
+
+                <article class="condition">
+                    <span class="condition__icon" aria-hidden="true">🎣</span>
+                    <span class="condition__label">Способ ловли</span>
+                    <span class="condition__value">Спиннинг</span>
+                </article>
+            </div>
+        </section>
+
+        <section class="fishing-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-eyebrow">Результат дня</span>
+                    <h2>Улов</h2>
+                </div>
+            </div>
+
+            <div class="catch-card">
+                <div class="catch-card__icon" aria-hidden="true">🐟</div>
+
+                <div class="catch-card__info">
+                    <span class="catch-card__label">Общий улов</span>
+                    <h3>Щука</h3>
+                    <p>2 рыбы за одну рыбалку</p>
+                </div>
+
+                <div class="catch-card__weight">
+                    <span>Общий вес</span>
+                    <strong>3,4 <small>кг</small></strong>
+                </div>
+            </div>
+        </section>
+
+        <section class="fishing-section">
+            <div class="section-heading">
+                <div>
+                    <span class="section-eyebrow">Личные наблюдения</span>
+                    <h2>Заметки</h2>
+                </div>
+            </div>
+
+            <div class="notes-card">
+                <div class="notes-card__mark" aria-hidden="true">“</div>
+                <p>
+                    Спиннинг, воблер на рассвете. Рыба была активнее
+                    в первые часы утра. Стоит попробовать вернуться
+                    на это место при похожей погоде.
+                </p>
+            </div>
+        </section>
+
+        <div class="fishing-actions">
+            <a href="edit-fishing.html" class="btn">Редактировать запись</a>
+
+            <form action="#" method="post"
+                onsubmit="return confirm('Удалить эту запись о рыбалке?')">
+                <button type="submit" class="btn btn--danger">
+                    Удалить
+                </button>
+            </form>
+        </div>
+
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>© 2026 FishLog</p>
-        <nav>
+        <nav aria-label="Соцсети">
             <ul>
-                <li>
-                    <a href="#">Telegram</a>
-                </li>
-                <li>
-                    <a href="#">VK</a>
-                </li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VK</a></li>
             </ul>
         </nav>
     </footer>
-
 </body>
 </html>

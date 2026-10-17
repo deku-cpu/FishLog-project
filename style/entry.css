@@ -1,0 +1,147 @@
+.page--narrow { max-width: 800px; }
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 28px;
+    background: white;
+    border: 1px solid var(--chip);
+    border-radius: 20px;
+}
+
+.form-grid { 
+    display: grid; 
+    gap: 16px; 
+}
+
+.form-grid--2 { 
+    grid-template-columns: repeat(2, 1fr); 
+}
+.form-grid--4 { 
+    grid-template-columns: repeat(4, 1fr); 
+}
+
+.tile {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 10px 14px;
+    background: white;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+}
+
+.tile:focus-within {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.tile label,
+.weather legend {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--muted);
+}
+
+.tile input,
+.tile textarea,
+.tile select {
+    width: 100%;
+    height: auto;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    color: var(--ink);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.tile input:focus-visible,
+.tile textarea:focus-visible,
+.tile select:focus-visible { 
+    outline: none; 
+}
+
+.tile textarea {
+    min-height: 72px;
+    resize: vertical;
+    font-weight: 400;
+}
+
+.weather { 
+    border: 0; 
+}
+.weather legend { 
+    margin-bottom: 10px; 
+}
+
+.weather__options {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.weather__options input {
+    position: absolute;
+    opacity: 0;
+    width: 1px;
+    height: 1px;
+}
+
+.weather__options label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    height: 36px;
+    padding: 0 14px;
+    border-radius: 18px;
+    background: var(--chip);
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.weather__options input:checked + label {
+    background: var(--teal);
+    color: white;
+}
+
+.weather__options input:focus-visible + label {
+    outline: 3px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.entry__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.entry__actions .btn,
+.entry__actions button { 
+    height: 52px; 
+}
+
+@media (max-width: 860px) {
+    .entry { 
+        padding: 20px; 
+    }
+
+    .form-grid--2 { 
+        grid-template-columns: 1fr; 
+    }
+
+    .form-grid--4 { 
+        grid-template-columns: repeat(2, 1fr); 
+    }
+
+    .entry__actions { 
+        flex-direction: column-reverse; 
+    }
+}

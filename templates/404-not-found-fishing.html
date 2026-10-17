@@ -3,25 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/app.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>Рыбалки не найдены - FishLog</title>
 </head>
 <body>
-    <header>
-        <a href="fishings.html">FishLog</a>
+    <header class="topbar">
+        <a class="logo" href="fishings.html">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12c4-6 11-6 15 0-4 6-11 6-15 0zM18 12l4-4v8z" />
+                <circle cx="8" cy="11" r="1" />
+            </svg>
+            FishLog
+        </a>
+
+        <nav class="topnav" aria-label="Основная навигация">
+            <ul>
+                <li><a class="active" href="fishings.html" aria-current="page">Журнал</a></li>
+                <li><a href="calendar.html">Календарь</a></li>
+                <li><a href="catches.html">Уловы</a></li>
+            </ul>
+        </nav>
+
+        <div class="topbar__side">
+            <a class="btn" href="add-fishing.html">Новая рыбалка</a>
+            <a class="avatar" href="profile.html" aria-label="Профиль">АК</a>
+        </div>
     </header>
 
-    <main>
-        <h1>Рыбалки не найдены</h1>
-        <p>По вашему запросу ничего не найдено.</p>
-        <a href="fishings.html">Вернуться к рыбалкам</a>
+    <main class="page">
+        <section class="empty">
+            <div class="empty__icon">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 12c4-6 11-6 15 0-4 6-11 6-15 0zM18 12l4-4v8z" />
+                    <circle cx="8" cy="11" r="1" />
+                </svg>
+            </div>
+            <h1>Рыбалки не найдены</h1>
+            <p>По вашему запросу ничего не найдено. Измените фильтр или добавьте новую запись.</p>
+            <a class="btn" href="fishings.html">Вернуться к журналу</a>
+        </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>© 2026 FishLog</p>
-        <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">VK</a></li>
-        </ul>
+        <nav aria-label="Соцсети">
+            <ul>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VK</a></li>
+            </ul>
+        </nav>
     </footer>
 </body>
 </html>

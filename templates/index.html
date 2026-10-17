@@ -3,42 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/app.css">
+    <link rel="stylesheet" href="/style/home.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>FishLog - электронный журнал рыбалок</title>
 </head>
 <body>
-    <header>
-        <a href="index.html">FishLog</a>
-        <nav>
-            <ul>
-                <li><a href="login.html">Войти</a></li>
-                <li><a href="register.html">Регистрация</a></li>
-            </ul>
-        </nav>
+    <header class="topbar">
+        <a class="logo" href="index.html">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M3 12c4-6 11-6 15 0-4 6-11 6-15 0zM18 12l4-4v8z" />
+                <circle cx="8" cy="11" r="1" />
+            </svg>
+            FishLog
+        </a>
+
+        <div class="topbar__side">
+            <a class="btn btn--ghost" href="login.html">Войти</a>
+            <a class="btn" href="register.html">Регистрация</a>
+        </div>
     </header>
 
-    <main>
-        <h1>FishLog</h1>
-        <p>Электронный журнал рыбалок</p>
+    <main class="home">
+        <section class="hero">
+            <div class="hero__inner">
+                <h1>Каждая рыбалка остаётся в записи</h1>
+                <p>FishLog — электронный журнал рыбалок: даты, погода, приманки и улов в одном месте.</p>
+                <div class="hero__actions">
+                    <a class="btn" href="register.html">Начать вести журнал</a>
+                    <a class="btn btn--ghost" href="login.html">Войти</a>
+                </div>
+            </div>
+        </section>
 
-        <section>
-            <h2>О проекте</h2>
-            <p>Веб-сайт для хранения рыбалок...</p>
+        <section class="about" aria-labelledby="about-title">
+            <h2 id="about-title">О проекте</h2>
+            <p class="about__lead">Веб-сайт для хранения записей о рыбалках: когда и где вы рыбачили, какая была погода и что удалось поймать.</p>
         </section>
     </main>
 
-    <footer>
+    <footer class="site-footer">
         <p>© 2026 FishLog</p>
-        <nav>
+        <nav aria-label="Соцсети">
             <ul>
-                <li>
-                    <a href="#">Telegram</a>
-                </li>
-                <li>
-                    <a href="#">VK</a>
-                </li>
+                <li><a href="#">Telegram</a></li>
+                <li><a href="#">VK</a></li>
             </ul>
         </nav>
     </footer>
-
 </body>
 </html>

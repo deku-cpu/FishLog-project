@@ -3,46 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/base.css">
+    <link rel="stylesheet" href="/style/auth.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
     <title>Регистрация - FishLog</title>
 </head>
+
 <body>
-    <header>
-        <a href="index.html">FishLog</a>
-    </header>
+    <div class="auth">
+        
+        <aside class="auth-aside">
+            <svg class="auth-lines" viewBox="0 0 600 840" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                <g>
+                    <ellipse cx="300" cy="420" rx="70" ry="50" />
+                    <ellipse cx="300" cy="426" rx="118" ry="88" />
+                    <ellipse cx="300" cy="432" rx="166" ry="126" />
+                    <ellipse cx="300" cy="438" rx="214" ry="164" />
+                    <ellipse cx="300" cy="444" rx="262" ry="202" />
+                    <ellipse cx="300" cy="450" rx="310" ry="240" />
+                </g>
+            </svg>
+            
+            <a class="logo" href="index.html">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 12c4-6 11-6 15 0-4 6-11 6-15 0zM18 12l4-4v8z" />
+                    <circle cx="8" cy="11" r="1" />
+                </svg>
+                FishLog
+            </a>
 
-    <main>
-        <h1>Регистрация</h1>
-        <form action="#" method="post">
-            <p>
-                <label for="name">Имя</label>
-                <input type="text" id="name" name="name" required>
-            </p>
+            <div class="auth-text">
+                <h2>Каждая рыбалка остаётся в записи</h2>
+                <p>Даты, погода, приманки и улов в одном дневнике. Вы быстрее поймёте, где и когда клюёт.</p>
+            </div>
 
-            <p>
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-            </p>
+        </aside>
+    
 
-            <p>
-                <label for="password">Пароль</label>
-                <input type="password" id="password" name="password" required>
-            </p>
+        <main class="auth-main">
 
-            <p>
-                <label for="password-repeat">Повтор пароля</label>
-                <input type="password" id="password-repeat" name="password-repeat" required>
-            </p>
-            <button type="submit">Регистрация</button>
-        </form>
-    </main>
+            <a class="logo logo-mobile" href="index.html">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M3 12c4-6 11-6 15 0-4 6-11 6-15 0zM18 12l4-4v8z" />
+                    <circle cx="8" cy="11" r="1" />
+                </svg>
+                FishLog
+            </a>
 
-    <footer>
-        <p>© 2026 FishLog</p>
-        <ul>
-            <li><a href="#">Telegram</a></li>
-            <li><a href="#">VK</a></li>
-        </ul>
-    </footer>
+            <div class="auth-content">
+                <nav class="tabs" aria-label="Вход или регистрация">
+                    <a class="tab" href="login.html">Вход</a>
+                    <a class="tab tab-active" href="auth.html" aria-current="page">Регистрация</a>
+                </nav>
+            
 
+                <h1>Регистрация</h1>
+
+                <p class="subtitle">Зарегистрируйтесь, чтобы создать свой журнал</p>
+
+                <form action="#" method="post">
+                    <div class="field">
+                        <label for="name">Имя</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="name@example.com" required>
+                    </div> 
+
+                    <div class="field">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" placeholder="Минимум 8 символов" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="password-repeat">Повтор пароля</label>
+                        <input type="password" id="password-repeat" name="password-repeat" placeholder="Минимум 8 символов" required>
+                    </div>
+
+                    <button type="submit">Регистрация</button>
+                </form>
+            </div>
+
+            <footer>
+                <p>© 2026 FishLog</p>
+                <nav aria-label="Соцсети">
+                    <ul>
+                        <li><a href="#">Telegram</a></li>
+                        <li><a href="#">VK</a></li>
+                    </ul>
+                </nav>
+            </footer>
+        </main>
+    </div>
 </body>
 </html>
